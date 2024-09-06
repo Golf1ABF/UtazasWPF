@@ -18,18 +18,36 @@
         <TextBox x:Name="time" HorizontalAlignment="Left" Margin="232,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22"/>
         <TextBox x:Name="card" HorizontalAlignment="Left" Margin="232,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22" TextChanged="card_TextChanged"/>
         <Label x:Name="counter" Content="0db" HorizontalAlignment="Left" Margin="406,145,0,0" VerticalAlignment="Top"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="144" Margin="57,206,0,0" VerticalAlignment="Top" Width="240"/>
-        <Label Content="Bérlet további adatai" HorizontalAlignment="Left" Margin="74,191,0,0" VerticalAlignment="Top" Background="White"/>
-        <Label Content="Bérlet típusa:" HorizontalAlignment="Left" Margin="57,206,0,0" VerticalAlignment="Top" Height="26" Width="93" FontSize="10"/>
-        <ComboBox x:Name="berletTipusa" HorizontalAlignment="Left" Margin="74,232,0,0" VerticalAlignment="Top" Width="152">
-            <ComboBoxItem Content="Válasszon bérletet!"/>
-        </ComboBox>
-        <Label Content="Bérlet érvényességi ideje:" HorizontalAlignment="Left" Margin="57,259,0,0" VerticalAlignment="Top" Height="26" Width="120" FontSize="10"/>
-        <DatePicker x:Name="ervenyessegDate" HorizontalAlignment="Left" Margin="74,290,0,0" VerticalAlignment="Top" Width="152"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="52" Margin="400,278,0,0" VerticalAlignment="Top" Width="149"/>
-        <Label Content="Bérlet vagy jegy" HorizontalAlignment="Left" Margin="415,265,0,0" VerticalAlignment="Top" Background="White"/>
-        <CheckBox x:Name="berlet" Content="Bérlet" HorizontalAlignment="Left" Margin="415,292,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="jegy" Content="Jegy" HorizontalAlignment="Left" Margin="415,307,0,0" VerticalAlignment="Top"/>
-
+        <GroupBox x:Name="jegyBox" Header="Jegy további adatai" Margin="421,223,83,4" Visibility="Hidden">
+            <StackPanel Margin="40,0,65,0" Height="155">
+                <Label
+        Width="94" Visibility="Visible" x:Name="jegytipusa" Height="26" FontSize="10" Content="Jegy típusa:"/>
+                <ComboBox
+        Width="152" Visibility="Visible" x:Name="jegylabel3">
+                    <ComboBoxItem
+        Content="Válasszon bérletet!"/>
+                </ComboBox>
+                <Label
+        Width="120" Visibility="Visible" x:Name="jegylabel1" Height="26" FontSize="10" Content="Jegy érvényességi ideje:"/>
+                <DatePicker
+        x:Name="jegylabel2" Visibility="Visible" Width="152"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="berletBox" Header="Bérlet További Adatai" Margin="58,200,456,75" Visibility="Hidden">
+            <StackPanel Margin="0,0,104,0" Height="137">
+                <Label x:Name="berlet2" Content="Bérlet típusa:" Height="26" Width="93" FontSize="10" Visibility="Visible"/>
+                <ComboBox x:Name="berletTipusa" Width="152" Visibility="Visible">
+                    <ComboBoxItem Content="Válasszon bérletet!"/>
+                </ComboBox>
+                <Label x:Name="berlet4" Content="Bérlet érvényességi ideje:" Height="26" Width="120" FontSize="10" Visibility="Visible"/>
+                <DatePicker  x:Name="ervenyessegDate" Width="152" Visibility="Visible"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Bérlet vagy Jegy" Margin="622,55,23,286">
+            <StackPanel Margin="0,0,11,0" Height="47">
+                <RadioButton x:Name="berlet" Content="Bérlet" Checked="berlet_Checked"/>
+                <RadioButton x:Name="jegy" Content="Jegy" Checked="jegy_Checked"/>
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </Window>

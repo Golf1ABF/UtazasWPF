@@ -14,7 +14,7 @@ namespace UtazasWPF
 {
     public partial class MainWindow : Window
     {
-        List<Utasok> utasok; 
+        List<Utasok> utasok;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,7 +37,20 @@ namespace UtazasWPF
                 {
                     berletTipusa.Items.Add(item.BerletTipus);
                 }
-                
+                if (!jegylabel3.Items.Contains(item.BerletTipus))
+                {
+                    jegylabel3.Items.Add(item.BerletTipus);
+                }
+
+            }
+
+            if (berlet.IsChecked == true)
+            {
+                jegy.IsEnabled = false;
+            }
+            else if (jegy.IsChecked == true)
+            {
+                berlet.IsEnabled = false;
             }
 
             for (int i = 0; i <= 29; i++)
@@ -48,7 +61,7 @@ namespace UtazasWPF
 
         private void card_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (card.Text.Length <7)
+            if (card.Text.Length < 7)
             {
                 counter.Content = $"{card.Text.Length} db";
             }
@@ -57,6 +70,16 @@ namespace UtazasWPF
                 counter.Content = "7 a maximális karakterszám";
                 card.IsEnabled = false;
             }
+        }
+
+        private void jegy_Checked(object sender, RoutedEventArgs e)
+        {
+            jegyBox.Visibility = Visibility.Visible;
+        }
+
+        private void berlet_Checked(object sender, RoutedEventArgs e)
+        {
+            berletBox.Visibility = Visibility.Visible;
         }
     }
 }

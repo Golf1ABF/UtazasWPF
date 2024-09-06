@@ -18,19 +18,11 @@
         <TextBox x:Name="time" HorizontalAlignment="Left" Margin="232,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22"/>
         <TextBox x:Name="card" HorizontalAlignment="Left" Margin="232,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22" TextChanged="card_TextChanged"/>
         <Label x:Name="counter" Content="0db" HorizontalAlignment="Left" Margin="406,145,0,0" VerticalAlignment="Top"/>
-        <GroupBox x:Name="jegyBox" Header="Jegy további adatai" Margin="421,223,83,4" Visibility="Hidden">
-            <StackPanel Margin="40,0,65,0" Height="155">
-                <Label
-        Width="94" Visibility="Visible" x:Name="jegytipusa" Height="26" FontSize="10" Content="Jegy típusa:"/>
-                <ComboBox
-        Width="152" Visibility="Visible" x:Name="jegylabel3">
-                    <ComboBoxItem
-        Content="Válasszon bérletet!"/>
-                </ComboBox>
-                <Label
-        Width="120" Visibility="Visible" x:Name="jegylabel1" Height="26" FontSize="10" Content="Jegy érvényességi ideje:"/>
-                <DatePicker
-        x:Name="jegylabel2" Visibility="Visible" Width="152"/>
+        <GroupBox x:Name="jegyBox" Header="Jegy további adatai" Margin="58,200,456,75" Visibility="Visible">
+            <StackPanel Margin="10,0,95,0" Height="124">
+                <Slider x:Name="sliderJegy" Width="196" Height="19" ValueChanged="sliderJegy_ValueChanged"/>
+                <Label Content="Felhasználható jegy:"/>
+                <Label x:Name="sliderCounter" Content="0db"/>
             </StackPanel>
         </GroupBox>
         <GroupBox x:Name="berletBox" Header="Bérlet További Adatai" Margin="58,200,456,75" Visibility="Hidden">

@@ -37,20 +37,7 @@ namespace UtazasWPF
                 {
                     berletTipusa.Items.Add(item.BerletTipus);
                 }
-                if (!jegylabel3.Items.Contains(item.BerletTipus))
-                {
-                    jegylabel3.Items.Add(item.BerletTipus);
-                }
 
-            }
-
-            if (berlet.IsChecked == true)
-            {
-                jegy.IsEnabled = false;
-            }
-            else if (jegy.IsChecked == true)
-            {
-                berlet.IsEnabled = false;
             }
 
             for (int i = 0; i <= 29; i++)
@@ -75,11 +62,18 @@ namespace UtazasWPF
         private void jegy_Checked(object sender, RoutedEventArgs e)
         {
             jegyBox.Visibility = Visibility.Visible;
+            berletBox.Visibility = Visibility.Hidden;
         }
 
         private void berlet_Checked(object sender, RoutedEventArgs e)
         {
             berletBox.Visibility = Visibility.Visible;
+            jegyBox.Visibility = Visibility.Hidden;
+        }
+
+        private void sliderJegy_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            sliderCounter.Content = sliderJegy.Value;
         }
     }
 }

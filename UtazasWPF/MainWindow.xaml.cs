@@ -18,6 +18,8 @@ namespace UtazasWPF
         public MainWindow()
         {
             InitializeComponent();
+            var konzolos = new KonzolosResz();
+            konzolos.Show();
 
             utasok = new List<Utasok>();
             var sr = new StreamReader("../../../source/utasadat.txt", System.Text.Encoding.UTF8);

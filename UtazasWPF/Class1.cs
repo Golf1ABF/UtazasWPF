@@ -23,5 +23,10 @@ namespace UtazasWPF
             this.BerletTipus = s[3];
             this.BerletErvenyesseg = s[4];
         }
+
+        public static implicit operator Utasok(List<Utasok> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

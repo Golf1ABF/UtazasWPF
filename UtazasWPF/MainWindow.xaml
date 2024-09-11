@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UtazasWPF"
         mc:Ignorable="d"
-        Title="eUtazás 2020 - Új felszállás" Height="450" Width="800">
+        Title="eUtazás 2020 - Új felszállás" Height="450" Width="600">
     <Grid>
         <Label Content="Megálló sorszáma:" HorizontalAlignment="Left" Margin="57,26,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbx" HorizontalAlignment="Left" Margin="232,30,0,0" VerticalAlignment="Top" Width="161">
@@ -18,29 +18,29 @@
         <TextBox x:Name="timeTbx" HorizontalAlignment="Left" Margin="232,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22"/>
         <TextBox x:Name="card" HorizontalAlignment="Left" Margin="232,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22" TextChanged="card_TextChanged"/>
         <Label x:Name="counter" Content="0db" HorizontalAlignment="Left" Margin="406,145,0,0" VerticalAlignment="Top"/>
-        <GroupBox x:Name="jegyBox" Header="Jegy további adatai" Margin="58,200,456,75" Visibility="Hidden">
+        <GroupBox x:Name="jegyBox" Header="Jegy további adatai" Margin="58,200,288,75" Visibility="hidden">
             <StackPanel Margin="10,0,95,0" Height="124">
                 <Slider x:Name="sliderJegy" Width="196" Height="19" ValueChanged="sliderJegy_ValueChanged"/>
                 <Label Content="Felhasználható jegy:"/>
                 <Label x:Name="sliderCounter" Content="0db"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="berletBox" Header="Bérlet További Adatai" Margin="58,200,456,75" Visibility="Hidden">
+        <GroupBox x:Name="berletBox" Header="Bérlet További Adatai" Margin="58,200,288,75" Visibility="Hidden">
             <StackPanel Margin="0,0,104,0" Height="137">
                 <Label x:Name="berlet2" Content="Bérlet típusa:" Height="26" Width="93" FontSize="10" Visibility="Visible"/>
-                <ComboBox x:Name="berletTipusa" Width="152" Visibility="Visible">
+                <ComboBox x:Name="berletTipusa" Width="128" Visibility="Visible">
                     <ComboBoxItem Content="Válasszon bérletet!"/>
                 </ComboBox>
                 <Label x:Name="berletErvenyesseg" Content="Bérlet érvényességi ideje:" Height="26" Width="120" FontSize="10" Visibility="Visible"/>
-                <DatePicker  x:Name="ervenyessegDate" Width="152" Visibility="Visible"/>
+                <DatePicker  x:Name="ervenyessegDate" Width="128" Visibility="Visible"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox Header="Bérlet vagy Jegy" Margin="622,55,23,286">
+        <GroupBox Header="Bérlet vagy Jegy" Margin="329,200,139,141">
             <StackPanel Margin="0,0,11,0" Height="47">
                 <RadioButton x:Name="berlet" Content="Bérlet" Checked="berlet_Checked"/>
                 <RadioButton x:Name="jegy" Content="Jegy" Checked="jegy_Checked"/>
             </StackPanel>
         </GroupBox>
-        <Button x:Name="check" Content="Adatok rögzítése és ellenőrzése" HorizontalAlignment="Left" Margin="273,387,0,0" VerticalAlignment="Top" Width="279" Click="check_Click"/>
+        <Button x:Name="check" Content="Adatok rögzítése és ellenőrzése" HorizontalAlignment="Left" Margin="173,387,0,0" VerticalAlignment="Top" Width="279" Click="check_Click"/>
     </Grid>
 </Window>

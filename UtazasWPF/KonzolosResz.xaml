@@ -1,0 +1,25 @@
+﻿<Window x:Class="UtazasWPF.KonzolosResz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UtazasWPF"
+        mc:Ignorable="d"
+        Title="KonzolosResz" Height="450" Width="800">
+    <Grid>
+        <Label Content="Első feladat" HorizontalAlignment="Left" Margin="44,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Második feladat" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Harmadik feladat" HorizontalAlignment="Left" Margin="648,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Második feladat" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Negyedik feladat" HorizontalAlignment="Left" Margin="32,176,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ötödik feladat" HorizontalAlignment="Left" Margin="353,176,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hatodik feladat" HorizontalAlignment="Left" Margin="656,176,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="elsoF" Content="" HorizontalAlignment="Left" Margin="44,88,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="masodikF" Content="" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="harmadikF" Content="" HorizontalAlignment="Left" Margin="625,88,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="negyedikF" Content="" HorizontalAlignment="Left" Margin="625,243,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="ötödikF" Content="" HorizontalAlignment="Center" Margin="0,251,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="hatodikF" Content="" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="154"/>
+
+    </Grid>
+</Window>

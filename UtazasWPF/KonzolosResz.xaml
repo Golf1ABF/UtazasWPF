@@ -17,9 +17,9 @@
         <Label x:Name="elsoF" Content="" HorizontalAlignment="Left" Margin="44,88,0,0" VerticalAlignment="Top" Width="154"/>
         <Label x:Name="masodikF" Content="" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top" Width="154"/>
         <Label x:Name="harmadikF" Content="" HorizontalAlignment="Left" Margin="625,88,0,0" VerticalAlignment="Top" Width="154"/>
-        <Label x:Name="negyedikF" Content="" HorizontalAlignment="Left" Margin="625,243,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="hatodikkF" Content="" HorizontalAlignment="Left" Margin="625,243,0,0" VerticalAlignment="Top" Width="154"/>
         <Label x:Name="ötödikF" Content="" HorizontalAlignment="Center" Margin="0,251,0,0" VerticalAlignment="Top" Width="154"/>
-        <Label x:Name="hatodikF" Content="" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label x:Name="negyedikF" Content="" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="154"/>
 
     </Grid>
 </Window>

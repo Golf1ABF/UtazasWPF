@@ -20,12 +20,24 @@ namespace UtazasWPF
         public KonzolosResz()
         {
             InitializeComponent();
-            Utasok lista = new List<Utasok>();
+            List<Utasok> lista = new List<Utasok>();
             var sr = new StreamReader("../../../source/utasadat.txt", System.Text.Encoding.UTF8);
             while (!sr.EndOfStream)
             {
-                lista.
+                lista.Add(new Utasok(sr.ReadLine()));
             }
+
+            harmadikF.Content = $"{lista.Count()} utas utazott";
+            var lejartBerlet = 0;
+            foreach (var item in lista)
+            {
+                if (item.BerletErvenyesseg < DateTime.Now)
+                {
+                    lejartBerlet++;
+                }
+                
+            }
+            negyedikF.Content = lejartBerlet;
         }
     }
 }

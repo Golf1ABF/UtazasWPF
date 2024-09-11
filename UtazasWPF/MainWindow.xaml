@@ -15,10 +15,10 @@
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="232,69,0,0" VerticalAlignment="Top" Width="161"/>
         <Label Content="Felszállás Időpontja [óó:pp]" HorizontalAlignment="Left" Margin="57,114,0,0" VerticalAlignment="Top"/>
         <Label Content="Kártya azonosítója:" HorizontalAlignment="Left" Margin="57,145,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="time" HorizontalAlignment="Left" Margin="232,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22"/>
+        <TextBox x:Name="timeTbx" HorizontalAlignment="Left" Margin="232,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22"/>
         <TextBox x:Name="card" HorizontalAlignment="Left" Margin="232,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="22" TextChanged="card_TextChanged"/>
         <Label x:Name="counter" Content="0db" HorizontalAlignment="Left" Margin="406,145,0,0" VerticalAlignment="Top"/>
-        <GroupBox x:Name="jegyBox" Header="Jegy további adatai" Margin="58,200,456,75" Visibility="Visible">
+        <GroupBox x:Name="jegyBox" Header="Jegy további adatai" Margin="58,200,456,75" Visibility="Hidden">
             <StackPanel Margin="10,0,95,0" Height="124">
                 <Slider x:Name="sliderJegy" Width="196" Height="19" ValueChanged="sliderJegy_ValueChanged"/>
                 <Label Content="Felhasználható jegy:"/>
@@ -31,7 +31,7 @@
                 <ComboBox x:Name="berletTipusa" Width="152" Visibility="Visible">
                     <ComboBoxItem Content="Válasszon bérletet!"/>
                 </ComboBox>
-                <Label x:Name="berlet4" Content="Bérlet érvényességi ideje:" Height="26" Width="120" FontSize="10" Visibility="Visible"/>
+                <Label x:Name="berletErvenyesseg" Content="Bérlet érvényességi ideje:" Height="26" Width="120" FontSize="10" Visibility="Visible"/>
                 <DatePicker  x:Name="ervenyessegDate" Width="152" Visibility="Visible"/>
             </StackPanel>
         </GroupBox>
@@ -41,5 +41,6 @@
                 <RadioButton x:Name="jegy" Content="Jegy" Checked="jegy_Checked"/>
             </StackPanel>
         </GroupBox>
+        <Button x:Name="check" Content="Adatok rögzítése és ellenőrzése" HorizontalAlignment="Left" Margin="273,387,0,0" VerticalAlignment="Top" Width="279" Click="check_Click"/>
     </Grid>
 </Window>

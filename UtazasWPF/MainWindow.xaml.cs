@@ -26,8 +26,8 @@ namespace UtazasWPF
                 utasok.Add(new Utasok(sr.ReadLine()));
             }
 
-            cbx.SelectedIndex = 1;
-            berletTipusa.SelectedIndex = 1;
+            cbx.SelectedIndex = 0;
+            berletTipusa.SelectedIndex = 0;
 
             datePicker.SelectedDate = DateTime.Now;
 
@@ -73,7 +73,53 @@ namespace UtazasWPF
 
         private void sliderJegy_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            sliderCounter.Content = sliderJegy.Value;
+            sliderCounter.Content = $"{((int)sliderJegy.Value)} db";
+        }
+
+        private void check_Click(object sender, RoutedEventArgs e)
+        {
+            if (cbx.SelectedIndex == 0)
+            {
+                MessageBox.Show("Nem választott megállót!");
+            } else if (!TimeSpan.TryParseExact(timeTbx.Text, @"hh\:mm", null, out TimeSpan time))
+            {
+                MessageBox.Show("Nem óó:pp formátumban adtad meg az időt!");
+            } else if (card.Text.Length != 7)
+            {
+                MessageBox.Show("A kártya azonosítója nem 7 karakter hosszú!");
+            } else if (card.Text.Length < 1)
+            {
+                MessageBox.Show("Pozitív egész számot adj meg!");
+            } else if (berletTipusa.SelectedIndex == 0 && berlet.IsChecked == true)
+            {
+                MessageBox.Show("Nem adta meg a bérlet tipusát!");
+            } else if (berletErvenyesseg == null && berlet.IsChecked == true)
+            {
+                MessageBox.Show("Nem adta meg a \r\nbérlet érvényességi idejét!");
+            } else
+            {
+                using (StreamWriter sw = new StreamWriter("../../../source/utasadat.txt", true))
+                {
+                    if (berlet.IsChecked == true)
+                    {
+                        sw.WriteLine($"{cbx.SelectedItem} {datePicker.SelectedDate?.ToString("yyyyMMdd")}-{timeTbx.Text.Replace(":", "")} {card.Text} {berletTipusa.Text} {ervenyessegDate.SelectedDate?.ToString("yyyyMMdd")}");
+                    }
+                    else
+                    {
+                        sw.WriteLine($"{cbx.SelectedItem} {datePicker.SelectedDate?.ToString("yyyyMMdd")}-{timeTbx.Text.Replace(":", "")} {card.Text} JGY {sliderCounter.Content}");
+                    }
+                }
+                MessageBox.Show("Az adatok tárolása sikeres volt!");
+                cbx.SelectedIndex = 0;
+                berletTipusa.SelectedIndex = 0;
+                timeTbx.Text = string.Empty;
+                card.Text = string.Empty;
+                card.IsEnabled = true;
+                berlet.IsChecked = false;
+                berletBox.Visibility = Visibility.Hidden;
+                jegy.IsChecked = false;
+                jegyBox.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

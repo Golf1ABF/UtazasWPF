@@ -42,5 +42,6 @@
             </StackPanel>
         </GroupBox>
         <Button x:Name="check" Content="Adatok rögzítése és ellenőrzése" HorizontalAlignment="Left" Margin="173,387,0,0" VerticalAlignment="Top" Width="279" Click="check_Click"/>
+        <Button Content="Konzolos ablak megnyitása" HorizontalAlignment="Left" Margin="239,359,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Window>

@@ -1,1 +1,0 @@
-4 2024. 09. 28. 0:00:00-System.Windows.Controls.TextBox: 12:53 5123435 System.Windows.Controls.ComboBox Items.Count:8 System.Windows.Controls.Label: Bérlet érvényességi ideje:
